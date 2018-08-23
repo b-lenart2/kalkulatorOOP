@@ -14,7 +14,7 @@
         }
     }
     
-    Cal.prototype.show1 = function() {
+    Cal.prototype.showResult = function() {
         var res1 = eval(this.resultDisplay.value);
             arr = [res1];
             this.resultDisplay.value = arr[0];
@@ -24,7 +24,7 @@
     Cal.prototype.calculate = function(e) {
         
         if (e.target.value == "=") {
-            this.show1();
+            this.showResult();
             return;
         }
         
