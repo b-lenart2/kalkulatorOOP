@@ -14,14 +14,17 @@
         }
     }
     
-    var arr = [];
-    Cal.prototype.calculate = function(e) {
-        console.log('sth works');
-        
-        if (e.target.value == "=") {
-            var res1 = eval(this.resultDisplay.value);
+    Cal.prototype.show1 = function() {
+        var res1 = eval(this.resultDisplay.value);
             arr = [res1];
             this.resultDisplay.value = arr[0];
+    }
+    
+    var arr = [];
+    Cal.prototype.calculate = function(e) {
+        
+        if (e.target.value == "=") {
+            this.show1();
             return;
         }
         
